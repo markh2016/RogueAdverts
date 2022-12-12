@@ -1,0 +1,204 @@
+
+/*  Reset */
+*{
+ padding: 0;
+ box-sizing: border-box;
+ margin: 0;
+
+}
+
+body{
+
+background: #000;
+
+}
+
+#maincontainer{
+    position: relative ;
+    width:90vw ;
+    height:100vh ;
+    display:flex;
+    margin :0 auto;
+    align-items: center;
+    justify-content: center;
+
+
+}
+
+.rhs_hand{
+position:absolute ;
+z-index: 2;
+transform:translate(-30px, -260px);
+animation-name: walk2;
+animation-duration: 10s ;
+animation-iteration-count: infinite;
+}
+
+.lhs_hand{
+    position:absolute ;
+    z-index: 3;
+    transform:translate(-65px, -360px);
+    animation-name: walk1;
+    animation-duration: 10s ;
+    animation-iteration-count: infinite;
+
+}
+
+.logo{
+    position:absolute ;
+    z-index: 1;
+    transform:translate(0px, 0px);
+    animation-name: rotate;
+    animation-duration: 20s ;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+.welcometext{
+    position:absolute ;
+    transform:translate(600px, -300px);
+    animation-name: slidein;
+    animation-duration: 10s ;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+
+
+}
+
+
+@keyframes slidein {
+    0%{
+
+        transform:translate(600px, -300px);
+
+    }
+
+    50%{
+
+        transform:translate(100px, -300px);
+    }
+
+    100%{
+
+        transform:translate(600px, -300px);
+    }
+  }
+
+@keyframes rotate {
+    from {
+    
+        transform: scale(0.7) rotate(0deg);
+    
+      }
+      to {
+     
+        transform: scale(1) rotate(360deg);
+      
+      }
+}
+
+
+
+@keyframes walk1 {
+    0% {
+        transform:translate(-65px, 400px);
+    }
+
+  
+
+   10%
+    {
+        transform:translate(-65px, 400px);
+
+    }
+
+    20%{
+
+        transform:translate(-65px, 200px);
+    }
+
+    30%
+    {
+        transform:translate(-65px, 200px);
+    }
+
+
+    40%{
+
+        transform:translate(-65px, 100px);
+    }
+
+    50%
+    {
+        transform:translate(-65px, 100px);
+
+    }
+    60% {
+
+        transform:translate(-65px, -20px);
+    }
+
+    70%{
+        transform:translate(-65px, -20px);
+    }
+
+    80% {
+             transform:translate(-65px, -160px);
+    }
+
+    90% {
+             transform:translate(-65px, -160px);
+    }
+    100% {
+             transform:translate(-65px, -360px);
+    }
+  }
+
+  @keyframes walk2{
+    0% {
+        transform:translate(-30px, 460px);
+    }
+
+   10%
+    {
+        transform:translate(-30px, 460px);
+
+    }
+
+    20%
+    {
+        transform:translate(-30px, 260px);
+
+    }
+
+    30%{
+
+        transform:translate(-30px, 160px);
+    }
+
+    40%
+    {
+        transform:translate(-30px, 160px);
+
+    }
+    50% {
+
+        transform:translate(-30px, 40px);
+    }
+    60% {
+       transform:translate(-30px, 40px);
+    }
+    70% {
+        transform:translate(-30px, -80px);
+    }
+    80% {
+        transform:translate(-30px, -80px);
+    }
+    90% {
+        transform:translate(-30px, -260px);
+    }
+    100% {
+        transform:translate(-30px, -260px);
+    }
+    
+  } 
