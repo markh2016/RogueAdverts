@@ -27,7 +27,7 @@ background: #000;
 
 .rhs_hand{
 position:absolute ;
-z-index: 2;
+z-index: 4;
 transform:translate(-30px, -260px);
 animation-name: walk2;
 animation-duration: 10s ;
@@ -56,38 +56,71 @@ animation-iteration-count: infinite;
 
 .welcometext{
     position:absolute ;
-    transform:translate(600px, -300px);
-    animation-name: slidein;
-    animation-duration: 10s ;
-    animation-iteration-count: infinite;
+    transform:translate(150px ,-300px) ;
+    z-index: 2;
+  
+    opacity:0;
+    animation-name:easein;
+    animation-duration:10s;
     animation-timing-function: linear;
+    animation-iteration-count: infinite;
+  
+    
 
 
 }
 
 
-@keyframes slidein {
-    0%{
+.greetings
+{
+    position:absolute ;
+    font-size: 20px;
+    color: #ffc107;
+    font-family: "Arial Black", Gadget, sans-serif;
+    text-shadow: 0px 0px 0 rgb(247,185,0),
+                 1px 1px 0 rgb(238,176,0),
+                 2px 2px 0 rgb(230,168,0),
+                 3px 3px 0 rgb(222,160,0),
+                 4px 4px 0 rgb(213,151,0),
+                 5px 5px 0 rgb(205,143,0),
+                 6px 6px  0 rgb(197,135,0),
+                 7px 7px 6px rgba(0,0,0,0.6),
+                 7px 7px 1px rgba(0,0,0,0.5),
+                 0px 0px 6px rgba(0,0,0,.2);
+    font-style: italic;
+    transform:translate(-10px ,330px) scale(1.2) ;
+    animation-name:slidesbottom;
+    animation-duration:10s;
+    animation-timing-function: ease-in;
+    animation-iteration-count:4;
+    animation-direction: alternate-reverse ;
+    
+}
+@keyframes easein {
+ 
+   0%  {
 
-        transform:translate(600px, -300px);
-
+       
+        opacity:0 ;
     }
 
-    50%{
-
-        transform:translate(100px, -300px);
+    25% , 50% , 75% {
+        opacity: 1 ;
     }
 
-    100%{
-
-        transform:translate(600px, -300px);
+    75% , 100% {
+    
+        opacity: 0 ;
     }
+
+  
   }
+
 
 @keyframes rotate {
     from {
     
-        transform: scale(0.7) rotate(0deg);
+        transform: scale(0.3) rotate(0deg);
     
       }
       to {
@@ -150,7 +183,7 @@ animation-iteration-count: infinite;
              transform:translate(-65px, -160px);
     }
     100% {
-             transform:translate(-65px, -360px);
+             transform:translate(-65px, -460px);
     }
   }
 
@@ -202,3 +235,12 @@ animation-iteration-count: infinite;
     }
     
   } 
+
+    @keyframes  slidesbottom{
+        0% {
+            transform :translate(-200px ,-500px) scale(0.2) rotateZ(25deg) ;
+        }
+        
+
+
+   }
